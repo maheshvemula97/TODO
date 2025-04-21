@@ -33,5 +33,9 @@ A simple, responsive **Task Manager** built using **React.js**, **Redux**, and *
 
 ---
 
-## 📁 Project Structure
+## Run Locally
+Clone the repository and 
+Install dependancies - npm install
+npm run dev
+
 

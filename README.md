@@ -4,7 +4,9 @@ A simple, responsive **Task Manager** built using **React.js**, **Redux**, and *
 
 
 
-🔗 **Live Demo:** <!-- will Replace it after deploying to vercel -->
+🔗 **Live Demo:**  https://codesandbox.io/p/sandbox/react-typescript-forked-878czf
+<img width="1510" alt="Screenshot 2025-04-21 at 8 41 36 PM" src="https://github.com/user-attachments/assets/1838a08d-fa98-4c13-ae59-0872b3dd310c" />
+
 
 ---
 

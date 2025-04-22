@@ -32,10 +32,10 @@ export const deleteTask = (id: number) => async (dispatch: any) => {
 };
 export const addTask = (title: string) => async (dispatch: any) => {
   try {
-    // await axios.post(`https://jsonplaceholder.typicode.com/todo/`, {
-    //   title: title,
-    //   completed: false,
-    // });
+    await axios.post(`https://jsonplaceholder.typicode.com/todos/`, {
+      title: title,
+      completed: false,
+    });
 
     dispatch({
       type: ADD_TASK,
@@ -47,8 +47,6 @@ export const addTask = (title: string) => async (dispatch: any) => {
 };
 
 export const setFilter = (filter: any) => async (dispatch: any) => {
-  console.log("onc all", filter);
-
   try {
     dispatch({
       type: SET_FILTER,
@@ -59,18 +57,18 @@ export const setFilter = (filter: any) => async (dispatch: any) => {
   }
 };
 
-export const toggleTask = (id: number) => async (dispatch: any) => {
-  try {
-    // await axios.delete(`https://jsonplaceholder.typicode.com/todo/`, {
-    //   title: title,
-    //   completed: false,
-    // });
+export const toggleTask =
+  (id: number, isCompleted: boolean) => async (dispatch: any) => {
+    try {
+      await axios.patch(`https://jsonplaceholder.typicode.com/todos/${id}`, {
+        completed: isCompleted,
+      });
 
-    dispatch({
-      type: TOGGLE_TASK,
-      payload: id,
-    });
-  } catch (error) {
-    console.error("Failed to update filter", error);
-  }
-};
+      dispatch({
+        type: TOGGLE_TASK,
+        payload: id,
+      });
+    } catch (error) {
+      console.error("Failed to update filter", error);
+    }
+  };

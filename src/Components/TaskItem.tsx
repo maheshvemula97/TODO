@@ -14,7 +14,7 @@ const TaskItem: React.FC<Props> = ({ task }) => {
         <input
           type="checkbox"
           checked={task.completed}
-          onChange={() => dispatch(toggleTask(task.id))}
+          onChange={() => dispatch(toggleTask(task.id, !task.completed))}
           className="task-checkbox"
         />
         <div className="task-details">
